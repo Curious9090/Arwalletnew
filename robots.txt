@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://arwallet.app/sitemap.xml
