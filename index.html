@@ -1,74 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AR Wallet Download | Login & Register</title>
   <!-- meta (keep all original) -->
-  <meta name="description" content="AR Wallet helps users sell ARB safely using a C2C system. Learn how to receive UPI payments, avoid scams, recharge games with ARPay, and trade securely." />
-  <meta name="keywords" content="AR Wallet, ARb wallet app, ARB token, arbpay, AR wallet earning, AR wallet se paise kaise kamaye, AR wallet UPI, PhonePe, Paytm, Freecharge, Mobikwik, arb login" />
+  <meta name="description"
+    content="AR Wallet helps users sell ARB safely using a C2C system. Learn how to receive UPI payments, avoid scams, recharge games with ARPay, and trade securely." />
+  <meta name="keywords"
+    content="AR Wallet, ARb wallet app, ARB token, arbpay, AR wallet earning, AR wallet se paise kaise kamaye, AR wallet UPI, PhonePe, Paytm, Freecharge, Mobikwik, arb login" />
   <meta name="robots" content="index, follow" />
   <!-- favicons (condensed) -->
-  <link rel="icon" type="image/webp" sizes="192x192" href="/assets/img/OG.webp">
+  <link rel="icon" type="image/webp" sizes="192x192" href="/OG.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="icon" href="/favicon/favicon.ico">
-  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#FFC107">
   <meta name="theme-color" content="#FFC107">
   <link rel="canonical" href="https://arwallet.co/" />
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="AR Wallet | Login & Register" />
-  <meta property="og:description" content="Step-by-step AR Wallet Download: download, register, connect UPI apps, trade ARB tokens (buy & sell) and withdraw profits to your bank." />
+  <meta property="og:description"
+    content="Step-by-step AR Wallet Download: download, register, connect UPI apps, trade ARB tokens (buy & sell) and withdraw profits to your bank." />
   <meta property="og:url" content="https://arwallet.co/" />
   <meta property="og:site_name" content="AR Wallet Download" />
-  <meta property="og:image" content="https://arwallet.co/assets/img/OG.webp" />
+  <meta property="og:image" content="https://arwallet.co/OG.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AR Wallet Download | Earn Money with ARB Token" />
-  <meta name="twitter:description" content="Learn how to earn money from AR Wallet using ARB token trading, UPI wallet connection and safe withdrawal methods." />
-  <meta name="twitter:image" content="https://arwallet.co/assets/img/OG.webp" />
+  <meta name="twitter:description"
+    content="Learn how to earn money from AR Wallet using ARB token trading, UPI wallet connection and safe withdrawal methods." />
+  <meta name="twitter:image" content="https://arwallet.co/OG.webp" />
   <!-- inline critical CSS (minimal, fast) -->
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-    body{background:#FFFBEA;color:#222;display:flex;align-items:center;justify-content:center;height:100dvh;overflow:hidden}
-    .phone-frame{background:#fff;width:90vw;max-width:420px;height:100%;max-height:calc(90vw*16/9);display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,0.12);overflow:hidden;position:relative}
-    .content-area{flex:1;overflow-y:auto;scrollbar-width:none;padding-bottom:60px}
-    .content-area::-webkit-scrollbar{display:none}
-    nav{background:#fff;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo img{width:40px;height:40px;border-radius:10px}
-    .logo span{font-weight:700;font-size:1.1rem;color:#000}
-    .menu-toggle{display:flex;flex-direction:column;gap:5px;background:0;border:none;cursor:pointer}
-    .menu-toggle span{background:#000;height:3px;width:25px;border-radius:5px}
-    nav ul{list-style:none;display:none;position:absolute;top:65px;right:10px;background:#fff;width:190px;padding:10px;box-shadow:0 6px 15px rgba(0,0,0,0.15);border-radius:10px;z-index:99}
-    nav ul.show{display:flex;flex-direction:column}
-    nav ul li a{text-decoration:none;color:#000;font-weight:600;padding:8px 10px;border-radius:8px;display:block;font-size:.9rem}
-    nav ul li a:hover{background:#FFC107;color:#fff}
-    .box{max-width:90%;margin:20px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.08);text-align:center;padding:25px 20px}
-    .box img{width:100px;border-radius:22px;margin-bottom:15px}
-    h1{font-size:1.4rem;color:#000;margin-bottom:10px}
-    p{font-size:.9rem;color:#555;margin-bottom:20px;line-height:1.5}
-    .button-group{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
-    .btn{flex:1 1 auto;background:#FFC107;color:#000;padding:10px 0;border:none;border-radius:10px;font-size:.95rem;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 4px 10px rgba(255,193,7,0.4);transition:.2s}
-    .btn.secondary{background:#fff;color:#000;border:1px solid #FFC107;box-shadow:none}
-    .btn.secondary:hover{background:#FFC107;color:#fff}
-    .telegram-btn{flex:1 1 auto;background:#0088cc;color:#fff;padding:10px 0;border-radius:10px;font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;box-shadow:0 4px 10px rgba(0,136,204,0.4);display:inline-flex;align-items:center;justify-content:center;gap:8px}
-    .telegram-btn:hover{background:#0077b5}
-    .content{background:#fff;margin:10px;padding:20px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
-    .content h2,.content h3{color:#000;border-bottom:2px solid #FFE9A7;padding-bottom:6px;margin-bottom:10px;font-size:1.05rem}
-    ul,ol{padding-left:18px;margin-bottom:10px}
-    li{font-size:.9rem;margin-bottom:6px}
-    table{width:100%;border-collapse:collapse;margin-top:15px;font-size:.88rem}
-    td,th{border:1px solid #FFE2A0;padding:8px;text-align:left}
-    th{background:#FFC107;color:#000}
-    tr:nth-child(even){background:#FFF8DC}
-    .note{font-size:.78rem;color:#777;margin-top:8px}
-    footer{background:#fff;text-align:center;font-size:.78rem;color:#777;padding:12px;border-top:1px solid #eee;position:absolute;bottom:0;left:0;width:100%;z-index:50}
-    footer a{color:#FFC107;text-decoration:none;font-weight:600}
-    a{color:#FFC107;font-weight:600;text-decoration:none}
-    a:hover{color:#000;text-decoration:underline}
-    @media (max-width:480px){body{background:#FFFBEA}.phone-frame{width:100%;max-width:none;border-radius:0;box-shadow:none;max-height:none}}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    body {
+      background: #FFFBEA;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100dvh;
+      overflow: hidden
+    }
+
+    .phone-frame {
+      background: #fff;
+      width: 90vw;
+      max-width: 420px;
+      height: 100%;
+      max-height: calc(90vw*16/9);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      position: relative
+    }
+
+    .content-area {
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: none;
+      padding-bottom: 60px
+    }
+
+    .content-area::-webkit-scrollbar {
+      display: none
+    }
+
+    nav {
+      background: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px
+    }
+
+    .logo span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #000
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: 0;
+      border: none;
+      cursor: pointer
+    }
+
+    .menu-toggle span {
+      background: #000;
+      height: 3px;
+      width: 25px;
+      border-radius: 5px
+    }
+
+    nav ul {
+      list-style: none;
+      display: none;
+      position: absolute;
+      top: 65px;
+      right: 10px;
+      background: #fff;
+      width: 190px;
+      padding: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      z-index: 99
+    }
+
+    nav ul.show {
+      display: flex;
+      flex-direction: column
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-radius: 8px;
+      display: block;
+      font-size: .9rem
+    }
+
+    nav ul li a:hover {
+      background: #FFC107;
+      color: #fff
+    }
+
+    .box {
+      max-width: 90%;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      padding: 25px 20px
+    }
+
+    .box img {
+      width: 100px;
+      border-radius: 22px;
+      margin-bottom: 15px
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      color: #000;
+      margin-bottom: 10px
+    }
+
+    p {
+      font-size: .9rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      flex: 1 1 auto;
+      background: #FFC107;
+      color: #000;
+      padding: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+      transition: .2s
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: #000;
+      border: 1px solid #FFC107;
+      box-shadow: none
+    }
+
+    .btn.secondary:hover {
+      background: #FFC107;
+      color: #fff
+    }
+
+    .telegram-btn {
+      flex: 1 1 auto;
+      background: #0088cc;
+      color: #fff;
+      padding: 10px 0;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px
+    }
+
+    .telegram-btn:hover {
+      background: #0077b5
+    }
+
+    .content {
+      background: #fff;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06)
+    }
+
+    .content h2,
+    .content h3 {
+      color: #000;
+      border-bottom: 2px solid #FFE9A7;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      font-size: 1.05rem
+    }
+
+    ul,
+    ol {
+      padding-left: 18px;
+      margin-bottom: 10px
+    }
+
+    li {
+      font-size: .9rem;
+      margin-bottom: 6px
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: .88rem
+    }
+
+    td,
+    th {
+      border: 1px solid #FFE2A0;
+      padding: 8px;
+      text-align: left
+    }
+
+    th {
+      background: #FFC107;
+      color: #000
+    }
+
+    tr:nth-child(even) {
+      background: #FFF8DC
+    }
+
+    .note {
+      font-size: .78rem;
+      color: #777;
+      margin-top: 8px
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      font-size: .78rem;
+      color: #777;
+      padding: 12px;
+      border-top: 1px solid #eee;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50
+    }
+
+    footer a {
+      color: #FFC107;
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    a {
+      color: #FFC107;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    a:hover {
+      color: #000;
+      text-decoration: underline
+    }
+
+    @media (max-width:480px) {
+      body {
+        background: #FFFBEA
+      }
+
+      .phone-frame {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+        max-height: none
+      }
+    }
   </style>
   <!-- structured data unchanged -->
   <script type="application/ld+json">
@@ -137,7 +408,7 @@
         "applicationCategory": "FinanceApplication",
         "description": "AR Wallet is a C2C finance app that allows users to trade ARB tokens, receive payments via UPI, recharge game accounts using ARPay, and manage transactions securely.",
         "url": "https://arwallet.co/",
-        "image": "https://arwallet.co/assets/img/OG.webp",
+        "image": "https://arwallet.co/OG.webp",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -153,120 +424,167 @@
   }
   </script>
 </head>
+
 <body>
-<div class="phone-frame">
-  <nav>
-    <div class="logo">
-      <img src="/OG.webp" alt="AR Wallet logo" width="40" height="40">
-      <a href="/"><span>AR Wallet</span></a>
-    </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul id="nav-menu">
-      <li><a href="../">Home</a></li>
-      <li><a href="../about-us/">About</a></li>
-      <li><a href="../contact-us/">Contact Us</a></li>
-      <li><a href="../disclaimer">Disclaimer</a></li>
-      <li><a href="../terms-and-conditions/">Terms & Conditions</a></li>
-      <li><a href="../privacy-policy/">Privacy Policy</a></li>
-    </ul>
-  </nav>
-
-  <main class="content-area">
-    <!-- HERO -->
-    <section class="box" id="home">
-      <img src="/OG.webp" alt="AR Wallet App" width="96" height="96">
-      <h1>AR Wallet</h1>
-      <p>India's trusted C2C trading platform for ARB tokens. Login or register to start secure trading in minutes.</p>
-      <div class="button-group">
-        <a href="https://arbpay.me/#/login" class="btn" target="_blank" rel="noopener">Login</a>
-        <a href="https://arbpay.me/#/register?code=AR1L66V" class="btn" target="_blank" rel="noopener">Register</a>
+  <div class="phone-frame">
+    <nav>
+      <div class="logo">
+        <img src="/OG.webp" alt="AR Wallet logo" width="40" height="40">
+        <a href="/"><span>AR Wallet</span></a>
       </div>
-      <br>
-      <div class="button-group">
-        <a href="https://download.arbpay.me/index.html?code=AR1L66V" class="btn" target="_blank" rel="noopener">Download App</a>
-      </div>
-      <br>
-      <div class="button-group">
-        <a href="https://t.me/+k90impn6DxZjNTU1" class="telegram-btn" target="_blank">
-           Join Telegram
-        </a>
-      </div>
-    </section>
-
-    <!-- WHAT IS AR WALLET -->
-    <section class="content" id="what-is-arwallet">
-      <h2>What is AR Wallet?</h2>
-      <p>AR Wallet is a peer-to-peer (C2C) digital asset platform built for Indian users. It enables seamless buying and selling of ARB tokens directly between users. When you purchase 100 ARB tokens, you receive 107 tokens—7 bonus tokens credited instantly. 1 ARB token maintains a baseline value of ₹1, with market-driven price fluctuations creating earning opportunities.</p>
-      <h2>How to Use AR Wallet / ARB Wallet?</h2>
-      <p>AR Wallet and ARB Wallet refer to the same application. Getting started takes only two minutes: register via the download button, complete your profile, and link your UPI ID. To buy ARB, tap "Buy" on the home screen and select an offer. To sell, tap "Sell" and wait for a buyer match. Every transaction is secured by the platform's C2C confirmation system.</p>
-      <h3>Key Features</h3>
-      <ul>
-        <li><strong>Instant withdrawals:</strong> Receive funds directly in your UPI account.</li>
-        <li><strong>Clean, beginner-friendly interface:</strong> No confusing charts or jargon.</li>
-        <li><strong>Bank-grade security:</strong> 2FA, device binding, and transaction monitoring.</li>
-        <li><strong>One-tap buy/sell:</strong> Complete trades in under 30 seconds.</li>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/terms.html">Terms & Conditions</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
       </ul>
-    </section>
+    </nav>
 
-    <!-- HOW TO EARN / SAFETY -->
-    <section class="content" id="how-to-earn">
-      <h2>Is AR Wallet Safe & Legitimate?</h2>
-      <p>Safety is the most common concern among new users. Since its launch, AR Wallet has maintained a clean track record—no payment defaults, no exit scams, and no security breaches. The platform operates with full transparency, displaying all terms before each transaction. While no investment is 100% risk-free, AR Wallet has earned trust through consistent, honest operations.</p>
-      <h3>Understanding ARB Token Value</h3>
-      <table>
-        <tbody>
-          <tr><td>Platform</td><td>AR Wallet</td></tr>
-          <tr><td>Referral Code (Optional)</td><td>AR1L66V</td></tr>
-          <tr><td>Current ARB Trend</td><td>ARB trading price dynamically adjusts based on market activity</td></tr>
-          <tr><td>Example Scenario</td><td>Sell 100 tokens at ₹6 each = ₹600 received via UPI</td></tr>
-          <tr><td>Estimated Margin</td><td>₹600 − ₹500 (purchase cost) = ₹100 gross profit</td></tr>
-        </tbody>
-      </table>
-      <p class="note">⚠️ This is a conceptual example. Token prices fluctuate based on supply and demand. Past performance does not guarantee future returns. Always verify current rates inside the app before trading.</p>
-    </section>
+    <main class="content-area">
+      <!-- HERO -->
+      <section class="box" id="home">
+        <img src="/OG.webp" alt="AR Wallet App" width="96" height="96">
+        <h1>AR Wallet</h1>
+        <p>India's trusted C2C trading platform for ARB tokens. Login or register to start secure trading in minutes.
+        </p>
+        <div class="button-group">
+          <a href="https://arbpay.me/#/login" class="btn" target="_blank" rel="noopener">Login</a>
+          <a href="https://arbpay.me/#/register?code=AR1L66V" class="btn" target="_blank" rel="noopener">Register</a>
+        </div>
+        <br>
+        <div class="button-group">
+          <a href="https://download.arbpay.me/index.html?code=AR1L66V" class="btn" target="_blank"
+            rel="noopener">Download App</a>
+        </div>
+        <br>
+        <div class="button-group">
+          <a href="https://t.me/+k90impn6DxZjNTU1" class="telegram-btn" target="_blank">
+            Join Telegram
+          </a>
+        </div>
+      </section>
 
-    <!-- FAQ -->
-    <section class="content" id="faq">
-      <h2>AR Wallet – Frequently Asked Questions (FAQ)</h2>
-      <h3>Is AR Wallet completely free?</h3>
-      <p>Account creation and basic wallet functions are 100% free. Buying or selling ARB requires you to fund your own UPI transactions. The platform may deduct a small service fee on completed trades, which is clearly disclosed before order confirmation. There are no hidden charges.</p>
-      <h3>How trustworthy is AR Wallet?</h3>
-      <p>AR Wallet operates on a customer-to-customer (C2C) model—funds move directly between buyer and seller UPI accounts; the platform never holds user money. This design minimizes institutional risk. However, as with any financial activity involving other individuals, users must remain vigilant. Use only the official download link, enable all security features, and never share sensitive credentials.</p>
-      <h3>What is the withdrawal process?</h3>
-      <p>AR Wallet does not process bank withdrawals directly. To liquidate your holdings, you must sell your ARB tokens to another user. The buyer transfers the agreed amount to your UPI ID. Once you verify the credit in your bank account, you mark the order as complete. This peer-to-peer mechanism ensures instant settlement without withdrawal delays.</p>
-      <h3>I sold ARB but didn't receive payment—what now?</h3>
-      <p>If funds are not credited to your UPI-linked bank account within a reasonable time, <strong>do not press "Confirm Receipt."</strong> Immediately hit the "Appeal" button to freeze the transaction and notify AR Wallet support. Our team will manually review payment proofs and take appropriate action. Confirming receipt without actual payment is irreversible.</p>
-      <h3>Can I operate multiple accounts?</h3>
-      <p>No. AR Wallet enforces a strict one-user, one-account policy. Duplicate accounts created with the same mobile number, UPI ID, or device fingerprint will be detected and permanently suspended without prior notice. This policy protects the community from fraudulent activity.</p>
-      <h3>How long until my sell order is matched?</h3>
-      <p>Matching time depends on current buyer demand. During peak hours, orders may match instantly. During low-activity periods, you may experience longer wait times. If your order remains unmatched, you can cancel it at any time and relist later. The platform continuously works to improve liquidity.</p>
-      <h3>What if a buyer sends a fake UPI screenshot?</h3>
-      <p>Screenshots can be manipulated. Always verify payment by checking your actual bank balance or UPI transaction history before confirming receipt. If you suspect a forged receipt, do not proceed—escalate via Appeal immediately. AR Wallet's dispute team will investigate and rule in favor of the honest party.</p>
-      <h3>Does AR Wallet offer phone support?</h3>
-      <p>To maintain security and prevent impersonation scams, AR Wallet does not provide voice call support. All customer service is conducted through the official in-app live chat. Our support staff will never request your UPI PIN, SMS OTP, or password. Any call claiming to be from "AR Wallet support" is fraudulent.</p>
-    </section>
-  </main>
+      <!-- WHAT IS AR WALLET -->
+      <section class="content" id="what-is-arwallet">
+        <h2>What is AR Wallet?</h2>
+        <p>AR Wallet is a peer-to-peer (C2C) digital asset platform built for Indian users. It enables seamless buying
+          and selling of ARB tokens directly between users. When you purchase 100 ARB tokens, you receive 107 tokens—7
+          bonus tokens credited instantly. 1 ARB token maintains a baseline value of ₹1, with market-driven price
+          fluctuations creating earning opportunities.</p>
+        <h2>How to Use AR Wallet / ARB Wallet?</h2>
+        <p>AR Wallet and ARB Wallet refer to the same application. Getting started takes only two minutes: register via
+          the download button, complete your profile, and link your UPI ID. To buy ARB, tap "Buy" on the home screen and
+          select an offer. To sell, tap "Sell" and wait for a buyer match. Every transaction is secured by the
+          platform's C2C confirmation system.</p>
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Instant withdrawals:</strong> Receive funds directly in your UPI account.</li>
+          <li><strong>Clean, beginner-friendly interface:</strong> No confusing charts or jargon.</li>
+          <li><strong>Bank-grade security:</strong> 2FA, device binding, and transaction monitoring.</li>
+          <li><strong>One-tap buy/sell:</strong> Complete trades in under 30 seconds.</li>
+        </ul>
+      </section>
 
-  <footer>
-    <p>© 2025 <a href="https://arwallet.co/" style="color:#000;">AR Wallet</a>. All rights reserved.</p>
-  </footer>
-</div>
+      <!-- HOW TO EARN / SAFETY -->
+      <section class="content" id="how-to-earn">
+        <h2>Is AR Wallet Safe & Legitimate?</h2>
+        <p>Safety is the most common concern among new users. Since its launch, AR Wallet has maintained a clean track
+          record—no payment defaults, no exit scams, and no security breaches. The platform operates with full
+          transparency, displaying all terms before each transaction. While no investment is 100% risk-free, AR Wallet
+          has earned trust through consistent, honest operations.</p>
+        <h3>Understanding ARB Token Value</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Platform</td>
+              <td>AR Wallet</td>
+            </tr>
+            <tr>
+              <td>Referral Code (Optional)</td>
+              <td>AR1L66V</td>
+            </tr>
+            <tr>
+              <td>Current ARB Trend</td>
+              <td>ARB trading price dynamically adjusts based on market activity</td>
+            </tr>
+            <tr>
+              <td>Example Scenario</td>
+              <td>Sell 100 tokens at ₹6 each = ₹600 received via UPI</td>
+            </tr>
+            <tr>
+              <td>Estimated Margin</td>
+              <td>₹600 − ₹500 (purchase cost) = ₹100 gross profit</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">⚠️ This is a conceptual example. Token prices fluctuate based on supply and demand. Past
+          performance does not guarantee future returns. Always verify current rates inside the app before trading.</p>
+      </section>
 
-<script>
-  (function(){
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('nav-menu');
-    if(toggle && menu) {
-      toggle.addEventListener('click', function(){
-        const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
-        this.setAttribute('aria-expanded', expanded);
-        menu.classList.toggle('show');
-      });
-    }
-  })();
-</script>
+      <!-- FAQ -->
+      <section class="content" id="faq">
+        <h2>AR Wallet – Frequently Asked Questions (FAQ)</h2>
+        <h3>Is AR Wallet completely free?</h3>
+        <p>Account creation and basic wallet functions are 100% free. Buying or selling ARB requires you to fund your
+          own UPI transactions. The platform may deduct a small service fee on completed trades, which is clearly
+          disclosed before order confirmation. There are no hidden charges.</p>
+        <h3>How trustworthy is AR Wallet?</h3>
+        <p>AR Wallet operates on a customer-to-customer (C2C) model—funds move directly between buyer and seller UPI
+          accounts; the platform never holds user money. This design minimizes institutional risk. However, as with any
+          financial activity involving other individuals, users must remain vigilant. Use only the official download
+          link, enable all security features, and never share sensitive credentials.</p>
+        <h3>What is the withdrawal process?</h3>
+        <p>AR Wallet does not process bank withdrawals directly. To liquidate your holdings, you must sell your ARB
+          tokens to another user. The buyer transfers the agreed amount to your UPI ID. Once you verify the credit in
+          your bank account, you mark the order as complete. This peer-to-peer mechanism ensures instant settlement
+          without withdrawal delays.</p>
+        <h3>I sold ARB but didn't receive payment—what now?</h3>
+        <p>If funds are not credited to your UPI-linked bank account within a reasonable time, <strong>do not press
+            "Confirm Receipt."</strong> Immediately hit the "Appeal" button to freeze the transaction and notify AR
+          Wallet support. Our team will manually review payment proofs and take appropriate action. Confirming receipt
+          without actual payment is irreversible.</p>
+        <h3>Can I operate multiple accounts?</h3>
+        <p>No. AR Wallet enforces a strict one-user, one-account policy. Duplicate accounts created with the same mobile
+          number, UPI ID, or device fingerprint will be detected and permanently suspended without prior notice. This
+          policy protects the community from fraudulent activity.</p>
+        <h3>How long until my sell order is matched?</h3>
+        <p>Matching time depends on current buyer demand. During peak hours, orders may match instantly. During
+          low-activity periods, you may experience longer wait times. If your order remains unmatched, you can cancel it
+          at any time and relist later. The platform continuously works to improve liquidity.</p>
+        <h3>What if a buyer sends a fake UPI screenshot?</h3>
+        <p>Screenshots can be manipulated. Always verify payment by checking your actual bank balance or UPI transaction
+          history before confirming receipt. If you suspect a forged receipt, do not proceed—escalate via Appeal
+          immediately. AR Wallet's dispute team will investigate and rule in favor of the honest party.</p>
+        <h3>Does AR Wallet offer phone support?</h3>
+        <p>To maintain security and prevent impersonation scams, AR Wallet does not provide voice call support. All
+          customer service is conducted through the official in-app live chat. Our support staff will never request your
+          UPI PIN, SMS OTP, or password. Any call claiming to be from "AR Wallet support" is fraudulent.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 <a href="https://arwallet.co/" style="color:#000;">AR Wallet</a>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
+          this.setAttribute('aria-expanded', expanded);
+          menu.classList.toggle('show');
+        });
+      }
+    })();
+  </script>
 </body>
 
 </html>
